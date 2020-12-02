@@ -22,11 +22,11 @@ requirements:
   host:
     - pip
     - pytest
-    - python
+    - python >=3.6
   run:
     - pyflakes
     - six
-    - python
+    - python !=3.6
 
 test:
   imports:
@@ -47,3 +47,4 @@ extra:
   recipe-maintainers:
     - asmeurer
     - scopatz
+    - carreau
