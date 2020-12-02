@@ -5,11 +5,9 @@ Home: https://pypi.org/project/pyflyby/
 
 Package license: MIT
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pyflyby-feedstock/blob/master/LICENSE.txt)
 
 Summary: pyflyby - Python development productivity tools, in particular automatic import management
-
-
 
 Current build status
 ====================
