@@ -26,6 +26,7 @@ requirements:
   run:
     - pyflakes
     - six
+    - toml
     - python !=3.6
 
 test:
@@ -48,3 +49,4 @@ extra:
     - asmeurer
     - scopatz
     - carreau
+    - quarl
