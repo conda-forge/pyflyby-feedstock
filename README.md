@@ -145,5 +145,5 @@ Feedstock Maintainers
 
 * [@asmeurer](https://github.com/asmeurer/)
 * [@carreau](https://github.com/carreau/)
-* [@scopatz](https://github.com/scopatz/)
+* [@quarl](https://github.com/quarl/)
 
