@@ -1,5 +1,5 @@
 {% set name = "pyflyby" %}
-{% set version = "1.8.2" %}
+{% set version = "1.8.5" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 420617a62e012b0c30818179f2112d5fd61b70c5849059d1c1b339bef3fdee69
+  sha256: 1efdb53a46e0385d64f4d2475aff93b7d5fc814933aa07b67451909e26cc186b
 
 build:
   number: 0
