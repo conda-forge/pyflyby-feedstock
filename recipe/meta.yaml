@@ -29,6 +29,7 @@ requirements:
     - toml
     - python !=3.6
     - isort
+    - black
 
 test:
   imports:
