@@ -28,7 +28,7 @@ requirements:
     - pyflakes
     - six
     - toml
-    - python
+    - python >=3.9
     - isort
     - black
 
