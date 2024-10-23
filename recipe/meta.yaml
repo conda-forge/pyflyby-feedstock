@@ -22,12 +22,13 @@ requirements:
   host:
     - pip
     - pytest
-    - python >=3.6
+    - python >=3.9
+    - setuptools
   run:
     - pyflakes
     - six
     - toml
-    - python !=3.6
+    - python
     - isort
     - black
 
