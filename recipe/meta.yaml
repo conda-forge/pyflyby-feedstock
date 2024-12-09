@@ -22,13 +22,13 @@ requirements:
   host:
     - pip
     - pytest
-    - python >=3.9
+    - python {{ python_min }}
     - setuptools
   run:
     - pyflakes
     - six
     - toml
-    - python >=3.9
+    - python >={{ python_min }}
     - isort
     - black
 
@@ -40,6 +40,7 @@ test:
     - py --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://pypi.org/project/pyflyby/
