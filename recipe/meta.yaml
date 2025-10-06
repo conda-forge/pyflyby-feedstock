@@ -25,6 +25,7 @@ requirements:
     - python {{ python_min }}
     - setuptools
     - meson-python
+    - compilers
   run:
     - pyflakes
     - six
