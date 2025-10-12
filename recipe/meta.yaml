@@ -22,10 +22,10 @@ build:
 
 requirements:
   build:
-    - python                                 # [build_platform != target_platform]
-    - pybind11                               # [build_platform != target_platform]
-    - meson-python                           # [build_platform != target_platform]
-    - ninja                                  # [build_platform != target_platform]
+    - python
+    - pybind11
+    - meson-python
+    - ninja
     - {{ compiler('cxx') }}
     - {{ stdlib('c') }}
   host:
