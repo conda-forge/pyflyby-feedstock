@@ -45,7 +45,7 @@ requirements:
     - isort
     - black
     - prompt_toolkit
-    - typing_extensions >=4.6  #[py<312]
+    - typing_extensions >=4.6  # [py<312]
 
 test:
   imports:
