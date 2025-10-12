@@ -34,7 +34,6 @@ requirements:
     - setuptools
     - python
     - meson-python
-    - pkg-config
     - pybind11
     - numpy
     - pip
