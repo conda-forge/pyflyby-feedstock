@@ -35,7 +35,6 @@ requirements:
     - python
     - meson-python
     - pkg-config
-    - python-build
     - pybind11
     - numpy
     - pip
