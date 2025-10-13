@@ -1,5 +1,5 @@
 {% set name = "pyflyby" %}
-{% set version = "1.9.12" %}
+{% set version = "1.10.1" %}
 
 
 package:
@@ -8,29 +8,44 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 4001cd44764875b626085a78293dcd25d4abaa68779bc35bdbd2e6b5c76e124f
+  sha256: 726f07146d73f61f8c187c09c4a289f32be3ed7a3f6231fa603f4e413f51ea45
 
 build:
   number: 0
-  noarch: python
   entry_points:
     - py = pyflyby._py:py_main
     - py3 = pyflyby._py:py_main
-  script: {{ PYTHON }} -m pip install . -vv
+  script: |
+      export CXXFLAGS="${CXXFLAGS} -D_LIBCPP_DISABLE_AVAILABILITY"  # [osx]
+      {{ PYTHON }} -m pip install . -vv
+  skip: true  # [win]
 
 requirements:
+  build:
+    - python
+    - pybind11
+    - meson-python
+    - ninja
+    - {{ compiler('cxx') }}
+    - {{ stdlib('c') }}
   host:
     - pip
-    - pytest
-    - python {{ python_min }}
+    - python
     - setuptools
+    - python
+    - meson-python
+    - pybind11
+    - numpy
+    - pip
   run:
     - pyflakes
     - six
     - toml
-    - python >={{ python_min }}
+    - python
     - isort
     - black
+    - prompt_toolkit
+    - typing_extensions >=4.6  # [py<312]
 
 test:
   imports:
@@ -40,7 +55,7 @@ test:
     - py --help
   requires:
     - pip
-    - python {{ python_min }}
+    - python
 
 about:
   home: https://pypi.org/project/pyflyby/
@@ -53,3 +68,5 @@ extra:
     - asmeurer
     - carreau
     - quarl
+    - peytondmurray
+    - krassowski
