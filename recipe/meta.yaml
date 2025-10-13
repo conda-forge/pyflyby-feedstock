@@ -11,7 +11,7 @@ source:
   sha256: 726f07146d73f61f8c187c09c4a289f32be3ed7a3f6231fa603f4e413f51ea45
 
 build:
-  number: 0
+  number: 1
   entry_points:
     - py = pyflyby._py:py_main
     - py3 = pyflyby._py:py_main
