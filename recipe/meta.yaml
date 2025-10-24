@@ -1,5 +1,5 @@
 {% set name = "pyflyby" %}
-{% set version = "1.10.1" %}
+{% set version = "1.10.2" %}
 
 
 package:
@@ -8,16 +8,16 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 726f07146d73f61f8c187c09c4a289f32be3ed7a3f6231fa603f4e413f51ea45
+  sha256: c68d5a9cc0cf787eca2ae012b597a62a261b1f849436743b15ce6bb1d9d04029
 
 build:
-  number: 1
+  number: 0
   entry_points:
     - py = pyflyby._py:py_main
     - py3 = pyflyby._py:py_main
   script: |
-      export CXXFLAGS="${CXXFLAGS} -D_LIBCPP_DISABLE_AVAILABILITY"  # [osx]
-      {{ PYTHON }} -m pip install . -vv
+    export CXXFLAGS="${CXXFLAGS} -D_LIBCPP_DISABLE_AVAILABILITY"  # [osx]
+    {{ PYTHON }} -m pip install . -vv
   skip: true  # [win]
 
 requirements:
