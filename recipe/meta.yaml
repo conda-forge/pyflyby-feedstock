@@ -16,6 +16,8 @@ build:
     - py = pyflyby._py:py_main
     - py3 = pyflyby._py:py_main
   script: |
+    # Replace setuptools_scm call with actual version in meson.build
+    sed -i.bak "s/version: run_command(\['python', '-m', 'setuptools_scm'\], check: true).stdout().strip(),/version: '{{ version }}',/" meson.build  # [unix]
     export CXXFLAGS="${CXXFLAGS} -D_LIBCPP_DISABLE_AVAILABILITY"  # [osx]
     {{ PYTHON }} -m pip install . -vv
   skip: true  # [win]
