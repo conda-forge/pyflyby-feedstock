@@ -17,6 +17,7 @@ build:
     - py3 = pyflyby._py:py_main
   script: |
     export CXXFLAGS="${CXXFLAGS} -D_LIBCPP_DISABLE_AVAILABILITY"  # [osx]
+    export SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}
     {{ PYTHON }} -m pip install . -vv
   skip: true  # [win]
 
@@ -26,6 +27,7 @@ requirements:
     - pybind11
     - meson-python
     - ninja
+    - setuptools_scm
     - {{ compiler('cxx') }}
     - {{ stdlib('c') }}
   host:
