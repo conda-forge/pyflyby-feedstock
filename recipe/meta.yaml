@@ -1,5 +1,5 @@
 {% set name = "pyflyby" %}
-{% set version = "1.11.2" %}
+{% set version = "1.11.3" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 7612b02ccf8edca1fda6f42688a0568d32ab49bbe5006109ea92b8c70adf88bc
+  sha256: bd3caade60dcad54043165ce457122e8178927ca43269ead5894b3841d20c3fb
 
 build:
   number: 0
